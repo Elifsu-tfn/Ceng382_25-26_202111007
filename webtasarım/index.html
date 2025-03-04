@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minnie Mouse Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="heart-container">
+        <div class="heart" onclick="showLogin()">
+        </div>
+
+        <div class="login container" id="loginBox">
+            <div class="small-heart"></div>
+            <div class="small-heart2"></div>
+            <h2>Minnie Mouse Login</h2>
+            <input type="text" placeholder="username" class="input-field">
+            <input type="password" placeholder="user password">
+            <button class="heart-button">Login</button>
+        </div>
+    
+    </div>    
+
+<!--How to make a login tab that opens when clicked and closes when clicked again-->
+<script>
+    function showLogin() {
+            var loginBox = document.getElementById("loginBox");
+            
+            if (loginBox.style.display === "none" || loginBox.style.display === "") {
+                loginBox.style.display = "block";
+            } else {
+                loginBox.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+    
+</html>

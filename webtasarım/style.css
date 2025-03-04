@@ -1,0 +1,168 @@
+body{
+    display: flex;
+    background: url(minniemouse.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    animation: zoom 8s infinite alternate;
+}
+/*Animation to zoom background in css and html code*/
+@keyframes zoom{
+    0%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 120%;
+    }
+}
+/*Create an animated drowing heart icon that moves up and down with css*/
+.heart-container {
+    margin-top: 200px;
+    margin-left: 300px; 
+    position: relative;
+    cursor: pointer;
+}
+
+.heart{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: purple;
+    transform: rotate(-45deg);
+    animation: bounce 2s infinite alternate ease-in-out;
+    border-radius: 5px;
+    background-image: radial-gradient(white 10%, transparent 10%);
+    background-size: 50px 50px;
+   
+}
+
+.heart::before,
+.heart::after{
+    content:'';
+    position: absolute;
+    width:87px;
+    height: 90px;
+    background-color:purple;
+    border-radius: 50%;
+    background-image: radial-gradient(white 10%, transparent 10%);
+    background-size: 50px 50px;
+
+}
+
+.heart::before{
+    top:-50px;
+    left:0;
+}
+
+.heart::after{
+    top:0;
+    left:50px;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0) rotate(-45deg);
+    }
+
+    100%{
+        transform: translateY(100px) rotate(-45deg);
+    }
+    
+}
+
+/*The login box design that will open when clicked aligned under the heart*/
+#loginBox {
+    display: none;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: purple;
+    padding: 10px;
+    border-radius: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    margin-left: 50px;
+    font-family: 'Pacifico', sans-serif;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Pacifico', sans-serif;
+}
+
+
+/*how to draw a small heart in css*/
+
+.small-heart {
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+.small-heart::before,
+.small-heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.small-heart::before {
+    top: -15px;
+    left: 0;
+}
+
+.small-heart::after {
+    top: 0;
+    left: 15px;
+}
+
+
+
+
+
+.small-heart2 {
+    position: absolute;
+    top: 50px;
+    left: 85%;
+    transform: translateX(-50%) rotate(-45deg);
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+.small-heart2::before,
+.small-heart2::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.small-heart2::before {
+    top: -15px;
+    left: 0;
+}
+
+.small-heart2::after {
+    top: 0;
+    left: 15px;
+}

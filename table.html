@@ -1,0 +1,77 @@
+<!-- The table page that should open after entering the necessary information(gpt was used) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Table</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="tableStyle.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="classInformation">Class Information</div>
+
+        <form id="classForm">
+            <label for="className">Class Name:</label>
+            <input type="text" id="className" required><br>
+            <p id="charCount">Characters: 0</p> 
+
+            <label for="numberOfPeople">Number of People:</label>
+            <input type="number" id="numberOfPeople" required><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea><br>
+
+            <button type="submit">Add Class</button>
+        </form>
+
+        <table id="classTable" border="1">
+            <thead>
+                <tr>
+                    <th>Class Name</th>
+                    <th>Number of People</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+       document.getElementById('classForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const className = document.getElementById('className').value;
+            const numberOfPeople = document.getElementById('numberOfPeople').value;
+            const description = document.getElementById('description').value;
+            
+            const table = document.getElementById('classTable').querySelector('tbody');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td>${className}</td>
+                <td>${numberOfPeople}</td>
+                <td>${description}</td>
+            `;
+
+            // Adds hover effect to new line
+            newRow.classList.add('hoverable-row');
+
+            // When newly added rows are double-clicked, row deletion is performed.
+            newRow.addEventListener('dblclick', function() {
+                table.removeChild(newRow);
+            });
+
+            table.appendChild(newRow);
+            document.getElementById('classForm').reset();
+        });
+
+        // Keyup event for character count
+        document.getElementById('className').addEventListener('keyup', function() {
+            const charCount = document.getElementById('className').value.length;
+            document.getElementById('charCount').textContent = `Characters: ${charCount}`;
+        });
+    </script>
+</body>
+</html>

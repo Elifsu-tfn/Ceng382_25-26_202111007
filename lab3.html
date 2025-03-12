@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minnie Mouse Login</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="clock" class="clock"></div>
+    <div class="heart-container">
+        <div class="heart" onclick="toggleLogin()"></div>
+
+        <div class="login container" id="loginBox">
+            <div class="small-heart"></div>
+            <div class="small-heart2"></div>
+
+            <h2>Minnie Mouse Login</h2>
+            
+            <input type="text" id="username" placeholder="Username" class="input-field">
+            <input type="password" id="password" placeholder="Password">
+            <button class="heart-button" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleLogin() {
+            const loginBox = document.getElementById("loginBox");
+            loginBox.style.display = (loginBox.style.display === "block") ? "none" : "block";
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'admin' && password === 'admin') {
+                window.location.href = 'table.html';
+            } else {
+                alert('Invalid login. Please try again.');
+            }
+        }
+
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        let formsVisible = true;
+        document.addEventListener('keydown', function(event) {
+            const loginBox = document.getElementById("loginBox");
+            if (event.key === 'H' || event.key === 'h') {
+                formsVisible = !formsVisible;
+                loginBox.style.display = formsVisible ? "block" : "none";
+            }
+        });
+    </script>
+</body>
+</html>

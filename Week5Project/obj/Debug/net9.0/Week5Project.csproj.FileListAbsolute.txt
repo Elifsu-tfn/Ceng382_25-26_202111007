@@ -95,4 +95,4 @@ C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Proje
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.pdb
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.genruntimeconfig.cache
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\ref\Week5Project.dll
-C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\2w3vzli8xh-4wwo6x5mzz.gz
+C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\2w3vzli8xh-jmcymu0ef5.gz

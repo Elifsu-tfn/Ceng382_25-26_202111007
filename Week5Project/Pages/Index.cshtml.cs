@@ -24,7 +24,6 @@ namespace Week5Project.Pages
         // OnGet method to render the page
         public void OnGet()
         {
-            // You can add logic here if needed, for example, to display existing data.
         }
 
         // OnPost method to handle form submission (Add operation)
@@ -32,7 +31,6 @@ namespace Week5Project.Pages
         {
             if (ModelState.IsValid)
             {
-                // Create a new ClassInformationModel object and add to the list
                 var newClass = new ClassInformationModel
                 {
                     ClassName = ClassName,
@@ -40,10 +38,7 @@ namespace Week5Project.Pages
                     Description = Description
                 };
 
-                // Add the new class to the in-memory list
                 ClassInformation.Add(newClass);
-
-                // Redirect to the same page to display the updated list
                 return RedirectToPage();
             }
             return Page();
@@ -69,7 +64,6 @@ namespace Week5Project.Pages
                 ClassName = classToEdit.ClassName;
                 StudentCount = classToEdit.StudentCount;
                 Description = classToEdit.Description;
-                // Optionally, you can remove the class to re-add it after edit
                 ClassInformation.Remove(classToEdit);
             }
             return Page();

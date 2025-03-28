@@ -1,77 +1,115 @@
-/* Sayfa genel arka planını pembe yap */
+
 body {
-  background-color: #ffcccb; /* Pembe arka plan */
-  color: #333; /* Koyu gri metin */
+  background-color: #db9dc2; 
+  color: #333;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Başlıklar için mor renk */
 h1, h3 {
-  color: #9b4d96; /* Mor başlık rengi */
+  color: #550850; 
 }
 
-/* Form etiketleri */
 .form-label {
   font-size: 1.1rem;
 }
 
-/* Form inputlarının stilini beyaz yapmak ve şık bir görünüm sağlamak */
+/* How do I make form inputs white? */
 .form-control {
-  background-color: #ffffff; /* Beyaz form alanları */
-  color: #333; /* Koyu gri metin rengi */
-  border: 1px solid #dba0db; /* Mor renkli sınır */
+  background-color: #ffffff; 
+  color: #333; 
+  border: 1px solid #dba0db;
   border-radius: 5px;
   padding: 10px;
 }
 
-/* Hata mesajları için kırmızı */
 .text-danger {
   color: #f44336;
 }
 
-/* Tablo düzeni */
 .table {
-  background-color: #ffffff; /* Beyaz arka plan */
+  background-color: #ffffff; 
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Tablo başlıkları */
+
 th {
-  background-color: #9b4d96;
+  background-color:  #550850;
   color: white;
   padding: 12px;
 }
 
-/* Tablo satırları */
+
 td {
   padding: 10px;
   text-align: center;
 }
 
-/* Butonlar için stil */
+/* Style of buttons */
 button.btn-primary {
-  background-color: #9b4d96; /* Mor buton */
+  background-color: #550850; 
   border: none;
+  margin-left: 220px ;
+  margin-top: 5px;
   border-radius: 5px;
   padding: 8px 12px;
   color: white;
 }
 
 button.btn-primary:hover {
-  background-color: #ab63b5; /* Hover durumunda daha açık mor */
+  background-color: #ab63b5; 
 }
 
-/* Silme butonları için stil */
+
 button.btn-danger {
-  background-color: #ff6347; /* Kırmızımsı pembe */
+  background-color: #ff6347; 
   border: none;
   color: white;
   border-radius: 5px;
 }
 
 button.btn-danger:hover {
-  background-color: #ff3b26; /* Hover durumunda daha yoğun kırmızı */
-}  
+  background-color: #ff3b26; 
+}
+
+/* How do I center titles? */
+.box-title {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 60px; 
+  background-color:  #550850; 
+  color: white; 
+  font-size: 1.5rem; 
+  border-radius: 8px 8px 0 0; 
+  margin-bottom: 15px; 
+}
+
+/*How do I frame the form ve table? */
+.form-container, .table-container {
+  border: 2px solid #550850; 
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px; 
+}
+
+.form-container {
+  margin-right: 15px; 
+}
+
+
+.table-container {
+  margin-left: 15px; 
+}
+
+/* How do I prevent the table from overflowing when adding long descriptions? */
+.description-cell {
+  white-space: normal;
+  word-wrap: break-word; 
+  max-width: 200px; 
+  word-break: break-all; 
+}

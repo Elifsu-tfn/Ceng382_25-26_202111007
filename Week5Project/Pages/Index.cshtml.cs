@@ -11,6 +11,24 @@ namespace Week5Project.Pages
         // Static list to act as an in-memory database
         public static List<ClassInformationModel> ClassInformation = new List<ClassInformationModel>();
 
+        // Initialize with sample data if empty
+        static IndexModel()
+        {
+            if (ClassInformation.Count == 0)
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    ClassInformation.Add(new ClassInformationModel
+                    {
+                        Id = i,
+                        ClassName = $"Class {i}",
+                        StudentCount = 10 + (i % 30),
+                        Description = $"Description for class {i}"
+                    });
+                }
+            }
+        }
+
         // Properties for form data binding
         [BindProperty]
         public string ClassName { get; set; }
@@ -21,9 +39,36 @@ namespace Week5Project.Pages
         [BindProperty]
         public string Description { get; set; }
 
-        // OnGet method to render the page
-        public void OnGet()
+        // Table model for display
+        public ClassInformationTable ClassTable { get; set; }
+
+        // OnGet method with filtering and pagination
+        public void OnGet(int currentPage = 1, int pageSize = 10, string filterClassName = null)
         {
+            // Apply filtering
+            var query = ClassInformation.AsQueryable();
+
+            if (!string.IsNullOrEmpty(filterClassName))
+            {
+                query = query.Where(c => c.ClassName.Contains(filterClassName));
+            }
+
+            // Apply pagination
+            var totalCount = query.Count();
+            var classes = query
+                .OrderBy(c => c.Id)
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            ClassTable = new ClassInformationTable
+            {
+                Classes = classes,
+                CurrentPage = currentPage,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                FilterClassName = filterClassName
+            };
         }
 
         // OnPost method to handle form submission (Add operation)
@@ -37,6 +82,9 @@ namespace Week5Project.Pages
                     StudentCount = StudentCount,
                     Description = Description
                 };
+
+                // Generate new ID
+                newClass.Id = ClassInformation.Any() ? ClassInformation.Max(c => c.Id) + 1 : 1;
 
                 ClassInformation.Add(newClass);
                 return RedirectToPage();

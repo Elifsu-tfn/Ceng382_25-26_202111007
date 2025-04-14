@@ -1,3 +1,4 @@
+//  Handles class data storage, CRUD operations, pagination, and export endpoints
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Week5Project.Models;

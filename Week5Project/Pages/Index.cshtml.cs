@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Week5Project.Models;
+using Week5Project.Helpers;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Week5Project.Pages
 {
     public class IndexModel : PageModel
     {
-        // Static list to act as an in-memory database
         public static List<ClassInformationModel> ClassInformation = new List<ClassInformationModel>();
 
-        // Initialize with sample data if empty
         static IndexModel()
         {
             if (ClassInformation.Count == 0)
@@ -29,31 +29,31 @@ namespace Week5Project.Pages
             }
         }
 
-        // Properties for form data binding
         [BindProperty]
-        public string ClassName { get; set; }
+        public string ClassName { get; set; } = string.Empty;
 
         [BindProperty]
         public int StudentCount { get; set; }
 
         [BindProperty]
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
-        // Table model for display
-        public ClassInformationTable ClassTable { get; set; }
+        public ClassInformationTable ClassTable { get; set; } = new ClassInformationTable();
 
-        // OnGet method with filtering and pagination
         public void OnGet(int currentPage = 1, int pageSize = 10, string filterClassName = null)
         {
-            // Apply filtering
+            LoadTableData(currentPage, pageSize, filterClassName);
+        }
+
+        private void LoadTableData(int currentPage, int pageSize, string filterClassName)
+        {
             var query = ClassInformation.AsQueryable();
 
             if (!string.IsNullOrEmpty(filterClassName))
             {
-                query = query.Where(c => c.ClassName.Contains(filterClassName));
+                query = query.Where(c => c.ClassName.Contains(filterClassName, StringComparison.OrdinalIgnoreCase));
             }
 
-            // Apply pagination
             var totalCount = query.Count();
             var classes = query
                 .OrderBy(c => c.Id)
@@ -71,28 +71,30 @@ namespace Week5Project.Pages
             };
         }
 
-        // OnPost method to handle form submission (Add operation)
         public IActionResult OnPostAdd()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var newClass = new ClassInformationModel
-                {
-                    ClassName = ClassName,
-                    StudentCount = StudentCount,
-                    Description = Description
-                };
-
-                // Generate new ID
-                newClass.Id = ClassInformation.Any() ? ClassInformation.Max(c => c.Id) + 1 : 1;
-
-                ClassInformation.Add(newClass);
-                return RedirectToPage();
+                LoadTableData(1, ClassTable.PageSize, ClassTable.FilterClassName);
+                return Page();
             }
-            return Page();
+
+            var newClass = new ClassInformationModel
+            {
+                Id = ClassInformation.Any() ? ClassInformation.Max(c => c.Id) + 1 : 1,
+                ClassName = ClassName,
+                StudentCount = StudentCount,
+                Description = Description
+            };
+
+            ClassInformation.Add(newClass);
+            return RedirectToPage(new { 
+                currentPage = ClassTable.CurrentPage,
+                pageSize = ClassTable.PageSize,
+                filterClassName = ClassTable.FilterClassName
+            });
         }
 
-        // OnPost method to handle delete operation
         public IActionResult OnPostDelete(int id)
         {
             var classToDelete = ClassInformation.FirstOrDefault(c => c.Id == id);
@@ -100,10 +102,13 @@ namespace Week5Project.Pages
             {
                 ClassInformation.Remove(classToDelete);
             }
-            return RedirectToPage();
+            return RedirectToPage(new { 
+                currentPage = ClassTable.CurrentPage,
+                pageSize = ClassTable.PageSize,
+                filterClassName = ClassTable.FilterClassName
+            });
         }
 
-        // OnPost method to handle edit operation
         public IActionResult OnPostEdit(int id)
         {
             var classToEdit = ClassInformation.FirstOrDefault(c => c.Id == id);
@@ -114,7 +119,34 @@ namespace Week5Project.Pages
                 Description = classToEdit.Description;
                 ClassInformation.Remove(classToEdit);
             }
+            
+            LoadTableData(ClassTable.CurrentPage, ClassTable.PageSize, ClassTable.FilterClassName);
             return Page();
+        }
+
+        public IActionResult OnGetExportVisibleData(string filterClassName, int currentPage, int pageSize)
+        {
+            var query = ClassInformation.AsQueryable();
+
+            if (!string.IsNullOrEmpty(filterClassName))
+            {
+                query = query.Where(c => c.ClassName.Contains(filterClassName, StringComparison.OrdinalIgnoreCase));
+            }
+
+            var data = query
+                .OrderBy(c => c.Id)
+                .Skip((currentPage - 1) * pageSize)
+                .Take(pageSize)
+                .Select(c => new {
+                    c.Id,
+                    c.ClassName,
+                    c.StudentCount,
+                    c.Description,
+                    ExportDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                })
+                .ToList();
+
+            return new JsonResult(data);
         }
     }
 }

@@ -96,3 +96,6 @@ C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Proje
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.genruntimeconfig.cache
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\ref\Week5Project.dll
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\2w3vzli8xh-jmcymu0ef5.gz
+C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.csproj.AssemblyReference.cache
+C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Pro.66BBDE23.Up2Date

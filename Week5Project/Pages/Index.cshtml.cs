@@ -1,4 +1,3 @@
-//  Handles class data storage, CRUD operations, pagination, and export endpoints
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Week5Project.Models;
@@ -6,6 +5,7 @@ using Week5Project.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Http;
 
 namespace Week5Project.Pages
 {
@@ -41,9 +41,33 @@ namespace Week5Project.Pages
 
         public ClassInformationTable ClassTable { get; set; } = new ClassInformationTable();
 
-        public void OnGet(int currentPage = 1, int pageSize = 10, string filterClassName = null)
+        public IActionResult OnGet(int currentPage = 1, int pageSize = 10, string filterClassName = null)
         {
+            if (!IsAuthenticated())
+            {
+                return RedirectToPage("/Login");
+            }
+
             LoadTableData(currentPage, pageSize, filterClassName);
+            return Page();
+        }
+
+        private bool IsAuthenticated()
+        {
+            var usernameFromSession = HttpContext.Session.GetString("username");
+            var tokenFromSession = HttpContext.Session.GetString("token");
+            var sessionIdFromSession = HttpContext.Session.GetString("session_id");
+
+            var usernameFromCookie = Request.Cookies["username"];
+            var tokenFromCookie = Request.Cookies["token"];
+            var sessionIdFromCookie = Request.Cookies["session_id"];
+
+            return !string.IsNullOrEmpty(usernameFromSession) &&
+                   !string.IsNullOrEmpty(tokenFromSession) &&
+                   !string.IsNullOrEmpty(sessionIdFromSession) &&
+                   usernameFromSession == usernameFromCookie &&
+                   tokenFromSession == tokenFromCookie &&
+                   sessionIdFromSession == sessionIdFromCookie;
         }
 
         private void LoadTableData(int currentPage, int pageSize, string filterClassName)
@@ -74,6 +98,11 @@ namespace Week5Project.Pages
 
         public IActionResult OnPostAdd()
         {
+            if (!IsAuthenticated())
+            {
+                return RedirectToPage("/Login");
+            }
+
             if (!ModelState.IsValid)
             {
                 LoadTableData(1, ClassTable.PageSize, ClassTable.FilterClassName);
@@ -98,6 +127,11 @@ namespace Week5Project.Pages
 
         public IActionResult OnPostDelete(int id)
         {
+            if (!IsAuthenticated())
+            {
+                return RedirectToPage("/Login");
+            }
+
             var classToDelete = ClassInformation.FirstOrDefault(c => c.Id == id);
             if (classToDelete != null)
             {
@@ -112,6 +146,11 @@ namespace Week5Project.Pages
 
         public IActionResult OnPostEdit(int id)
         {
+            if (!IsAuthenticated())
+            {
+                return RedirectToPage("/Login");
+            }
+
             var classToEdit = ClassInformation.FirstOrDefault(c => c.Id == id);
             if (classToEdit != null)
             {
@@ -127,6 +166,11 @@ namespace Week5Project.Pages
 
         public IActionResult OnGetExportVisibleData(string filterClassName, int currentPage, int pageSize)
         {
+            if (!IsAuthenticated())
+            {
+                return RedirectToPage("/Login");
+            }
+
             var query = ClassInformation.AsQueryable();
 
             if (!string.IsNullOrEmpty(filterClassName))

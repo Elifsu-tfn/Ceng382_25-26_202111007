@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IWTl94msuLCEU1PGaU4s1hUapunXuM/TP3rIcMC3gVY=",
+  "Hash": "YtiG3JV8X+WWdBm4bH34LFey+phw/7jB3lx8hCieYpY=",
   "Source": "Week5Project",
   "BasePath": "_content/Week5Project",
   "Mode": "Default",
@@ -185,6 +185,27 @@
       "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3co6vs4wko-57rkdquy26.gz",
+      "SourceId": "Week5Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Week5Project",
+      "RelativePath": "data/users#[.{fingerprint=57rkdquy26}]?.json.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "27bw02c7pq",
+      "Integrity": "rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json"
+    },
+    {
       "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3j68r2tsyj-iovd86k7lj.gz",
       "SourceId": "Week5Project",
       "SourceType": "Discovered",
@@ -225,27 +246,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4gx7uu736a-horn39v55u.gz",
-      "SourceId": "Week5Project",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/Week5Project",
-      "RelativePath": "Week5Project#[.{fingerprint=horn39v55u}]?.styles.css.gz",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "8g16juyuxz",
-      "Integrity": "2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css"
     },
     {
       "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4p4iiy2irb-x0q3zqp4vz.gz",
@@ -519,27 +519,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\c242w46dob-horn39v55u.gz",
-      "SourceId": "Week5Project",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/Week5Project",
-      "RelativePath": "Week5Project#[.{fingerprint=horn39v55u}]!.bundle.scp.css.gz",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "8g16juyuxz",
-      "Integrity": "2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\ci61d2a5m8-tdbxkamptv.gz",
@@ -1361,48 +1340,6 @@
       "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css",
-      "SourceId": "Week5Project",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Week5Project",
-      "RelativePath": "Week5Project#[.{fingerprint}]?.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "horn39v55u",
-      "Integrity": "4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css",
-      "SourceId": "Week5Project",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Week5Project",
-      "RelativePath": "Week5Project#[.{fingerprint}]!.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "horn39v55u",
-      "Integrity": "4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css"
-    },
-    {
       "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\css\\site.css",
       "SourceId": "Week5Project",
       "SourceType": "Discovered",
@@ -1422,6 +1359,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json",
+      "SourceId": "Week5Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\",
+      "BasePath": "_content/Week5Project",
+      "RelativePath": "data/users#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "57rkdquy26",
+      "Integrity": "TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\users.json"
     },
     {
       "Identity": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\favicon.ico",
@@ -3022,6 +2980,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-dik7wIZt+6sJV0YNaH2yxcUyvPf7fDIHHDbirjSIcpM="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.57rkdquy26.json",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3co6vs4wko-57rkdquy26.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.006410256410"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "57rkdquy26"
+        },
+        {
+          "Name": "label",
+          "Value": "data/users.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.57rkdquy26.json",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "57rkdquy26"
+        },
+        {
+          "Name": "label",
+          "Value": "data/users.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.57rkdquy26.json.gz",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3co6vs4wko-57rkdquy26.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "57rkdquy26"
+        },
+        {
+          "Name": "label",
+          "Value": "data/users.json.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.json",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3co6vs4wko-57rkdquy26.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.006410256410"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.json",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc="
+        }
+      ]
+    },
+    {
+      "Route": "data/users.json.gz",
+      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\3co6vs4wko-57rkdquy26.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "155"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 12:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rsiFL4dt99IKcLfIbvaxJjzESMyYGu2f3BQvHUHtR8A="
         }
       ]
     },
@@ -21282,602 +21538,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-JKWeHUaANNuffeRatdc54UCb84RoxjEw/nTq8Mops8Y="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.bundle.scp.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\c242w46dob-horn39v55u.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001845018450"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.bundle.scp.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\c242w46dob-horn39v55u.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.bundle.scp.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\c242w46dob-horn39v55u.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001845018450"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.bundle.scp.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\c242w46dob-horn39v55u.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.bundle.scp.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.styles.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4gx7uu736a-horn39v55u.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001845018450"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.styles.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.horn39v55u.styles.css.gz",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4gx7uu736a-horn39v55u.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "horn39v55u"
-        },
-        {
-          "Name": "label",
-          "Value": "Week5Project.styles.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.styles.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4gx7uu736a-horn39v55u.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001845018450"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.styles.css",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\bundle\\Week5Project.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1130"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4cLELzo+KORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="
-        }
-      ]
-    },
-    {
-      "Route": "Week5Project.styles.css.gz",
-      "AssetFile": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\compressed\\4gx7uu736a-horn39v55u.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 09:03:34 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-2Bezdjaqb5Qt830udg9f8QUAuBEFO5/q7Bh8h6cF2gg="
         }
       ]
     }

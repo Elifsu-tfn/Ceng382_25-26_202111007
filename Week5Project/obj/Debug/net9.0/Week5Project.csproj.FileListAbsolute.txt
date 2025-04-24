@@ -15,9 +15,7 @@ C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Proje
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.RazorAssemblyInfo.cache
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.RazorAssemblyInfo.cs
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.sourcelink.json
-C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\scopedcss\bundle\Week5Project.styles.css
-C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\scopedcss\projectbundle\Week5Project.bundle.scp.css
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\88ydp62vsl-61n19gt1b8.gz
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\wrz9zylcxe-xtxxf3hu2r.gz
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\2l7c8ls012-bqjiyaj88i.gz
@@ -79,8 +77,6 @@ C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Proje
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\1pce2dskzt-muycvpuwrr.gz
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\gqaxmqdz8g-87fc7y1x7t.gz
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\qbaevbz9r9-mlv21k5csn.gz
-C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\4gx7uu736a-horn39v55u.gz
-C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\c242w46dob-horn39v55u.gz
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -99,3 +95,4 @@ C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Proje
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Project.csproj.AssemblyReference.cache
 C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\Week5Pro.66BBDE23.Up2Date
+C:\Users\bugra\OneDrive\Masaüstü\Ceng382Lab\Ceng382_25-26_202111007\Week5Project\obj\Debug\net9.0\compressed\3co6vs4wko-57rkdquy26.gz

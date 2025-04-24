@@ -1,0 +1,73 @@
+@page
+@model Week5Project.Pages.TableModel
+@{
+    ViewData["Title"] = "Class Management";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h2>Class Information</h2>
+            <form method="post">
+                <div class="form-group mb-3">
+                    <label for="className">Class Name</label>
+                    <input type="text" class="form-control" id="className" name="ClassName" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="studentCount">Student Count</label>
+                    <input type="number" class="form-control" id="studentCount" name="StudentCount" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="Description" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Class</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h2>Class List</h2>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control" id="filter" placeholder="Filter by class name">
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Class Name</th>
+                        <th>Student Count</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cls in Model.Classes)
+                    {
+                        <tr>
+                            <td>@cls.ClassName</td>
+                            <td>@cls.StudentCount</td>
+                            <td>@cls.Description</td>
+                            <td>
+                                <button class="btn btn-success">✅</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $("#filter").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table tbody tr").filter(function() {
+                    $(this).toggle($(this).find("td:first").text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+}

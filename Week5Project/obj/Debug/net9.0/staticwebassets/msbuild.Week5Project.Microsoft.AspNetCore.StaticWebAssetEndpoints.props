@@ -12,6 +12,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jmcymu0ef5"},{"Name":"integrity","Value":"sha256-lf2J9mdR8UGxp6xXzpaiDcRD8nQ/Shy0gffhe4YYanc="},{"Name":"label","Value":"_content/Week5Project/css/site.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1956"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022lf2J9mdR8UGxp6xXzpaiDcRD8nQ/Shy0gffhe4YYanc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 28 Mar 2025 22:24:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Week5Project/data/users.57rkdquy26.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\users.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"57rkdquy26"},{"Name":"integrity","Value":"sha256-TwSdXUOq06\u002BlT7Donsmx0H7ol\u002B9nty6Vn4162kXczJc="},{"Name":"label","Value":"_content/Week5Project/data/users.json"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"305"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022TwSdXUOq06\u002BlT7Donsmx0H7ol\u002B9nty6Vn4162kXczJc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 12:36:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Week5Project/data/users.json">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\users.json'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TwSdXUOq06\u002BlT7Donsmx0H7ol\u002B9nty6Vn4162kXczJc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"305"},{"Name":"Content-Type","Value":"application/json"},{"Name":"ETag","Value":"\u0022TwSdXUOq06\u002BlT7Donsmx0H7ol\u002B9nty6Vn4162kXczJc=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 12:36:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Week5Project/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -755,18 +767,6 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1117"},{"Name":"Content-Type","Value":"text/plain"},{"Name":"ETag","Value":"\u0022hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 08:53:11 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Week5Project/Week5Project.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Week5Project.horn39v55u.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4cLELzo\u002BKORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1130"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224cLELzo\u002BKORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 09:03:34 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Week5Project/Week5Project.horn39v55u.bundle.scp.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Week5Project.horn39v55u.bundle.scp.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"horn39v55u"},{"Name":"integrity","Value":"sha256-4cLELzo\u002BKORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk="},{"Name":"label","Value":"_content/Week5Project/Week5Project.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1130"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224cLELzo\u002BKORiMQNYJgeGS22kmRsaS4aNUzfk0rEPxwk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Mar 2025 09:03:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -1,9 +1,8 @@
-﻿@* Class management UI with CRUD operations, pagination, filtering, and export *@
-@page
+﻿@page
 @model Week5Project.Pages.IndexModel
 @using Week5Project.Helpers
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Class Management";
 }
 
 <!DOCTYPE html>
@@ -17,124 +16,140 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>Class Management System</h1>
+                <form method="get" asp-page="/Logout">
+                    <button type="submit" class="btn btn-danger">Logout (@HttpContext.Session.GetString("username"))</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
         <div class="row">
             <div class="col-md-6">
-                <div class="form-container">
-                    <div class="box-title">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
                         <span>Class Information</span>
                     </div>
-                    <form method="post" asp-page-handler="Add">
-                        @Html.AntiForgeryToken()
-                        <div class="form-group">
-                            <label asp-for="ClassName">Class Name</label>
-                            <input asp-for="ClassName" class="form-control" required />
-                            <span asp-validation-for="ClassName" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="StudentCount">Student Count</label>
-                            <input asp-for="StudentCount" type="number" class="form-control" required min="1" />
-                            <span asp-validation-for="StudentCount" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Description">Description</label>
-                            <textarea asp-for="Description" class="form-control" required></textarea>
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add Class</button>
-                    </form>
+                    <div class="card-body">
+                        <form method="post" asp-page-handler="Add">
+                            @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                <label asp-for="ClassName">Class Name</label>
+                                <input asp-for="ClassName" class="form-control" required />
+                                <span asp-validation-for="ClassName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="StudentCount">Student Count</label>
+                                <input asp-for="StudentCount" type="number" class="form-control" required min="1" />
+                                <span asp-validation-for="StudentCount" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <textarea asp-for="Description" class="form-control" required></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Class</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <div class="table-container">
-                    <div class="box-title">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
                         <span>Class List</span>
                     </div>
-                    
-                    <form method="get" class="mb-3">
-                        <div class="form-row">
-                            <div class="col">
-                                <input type="text" name="filterClassName" class="form-control" 
-                                       placeholder="Filter by class name" value="@Model.ClassTable.FilterClassName" 
-                                       oninput="this.form.submit()" />
+                    <div class="card-body">
+                        <form method="get" class="mb-3">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" name="filterClassName" class="form-control" 
+                                           placeholder="Filter by class name" value="@Model.ClassTable.FilterClassName" 
+                                           oninput="this.form.submit()" />
+                                </div>
                             </div>
+                        </form>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Class Name</th>
+                                        <th>Student Count</th>
+                                        <th>Description</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var classInfo in Model.ClassTable.Classes)
+                                    {
+                                        <tr data-id="@classInfo.Id">
+                                            <td>@classInfo.ClassName</td>
+                                            <td>@classInfo.StudentCount</td>
+                                            <td class="description-cell">@classInfo.Description</td>
+                                            <td class="d-flex">
+                                                <button type="button" class="btn btn-warning btn-sm mr-2 edit-btn" 
+                                                        data-id="@classInfo.Id"
+                                                        data-classname="@classInfo.ClassName"
+                                                        data-studentcount="@classInfo.StudentCount"
+                                                        data-description="@classInfo.Description">
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm delete-btn" 
+                                                        data-id="@classInfo.Id">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
                         </div>
-                    </form>
 
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Class Name</th>
-                                <th>Student Count</th>
-                                <th>Description</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var classInfo in Model.ClassTable.Classes)
-                            {
-                                <tr data-id="@classInfo.Id">
-                                    <td>@classInfo.ClassName</td>
-                                    <td>@classInfo.StudentCount</td>
-                                    <td class="description-cell">@classInfo.Description</td>
-                                    <td class="d-flex">
-                                        <button type="button" class="btn btn-warning btn-sm mr-2 edit-btn" 
-                                                data-id="@classInfo.Id"
-                                                data-classname="@classInfo.ClassName"
-                                                data-studentcount="@classInfo.StudentCount"
-                                                data-description="@classInfo.Description">
-                                            <i class="bi bi-pencil-square"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-sm delete-btn" 
-                                                data-id="@classInfo.Id">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                @if (Model.ClassTable.CurrentPage > 1)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" 
+                                           href="?currentPage=@(Model.ClassTable.CurrentPage - 1)&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
+                                            Previous
+                                        </a>
+                                    </li>
+                                }
+                                @for (int i = 1; i <= Model.ClassTable.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == Model.ClassTable.CurrentPage ? "active" : "")">
+                                        <a class="page-link" 
+                                           href="?currentPage=@i&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
+                                @if (Model.ClassTable.CurrentPage < Model.ClassTable.TotalPages)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" 
+                                           href="?currentPage=@(Model.ClassTable.CurrentPage + 1)&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
+                                            Next
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
 
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination">
-                            @if (Model.ClassTable.CurrentPage > 1)
-                            {
-                                <li class="page-item">
-                                    <a class="page-link" 
-                                       href="?currentPage=@(Model.ClassTable.CurrentPage - 1)&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
-                                        Previous
-                                    </a>
-                                </li>
-                            }
-                            @for (int i = 1; i <= Model.ClassTable.TotalPages; i++)
-                            {
-                                <li class="page-item @(i == Model.ClassTable.CurrentPage ? "active" : "")">
-                                    <a class="page-link" 
-                                       href="?currentPage=@i&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
-                                        @i
-                                    </a>
-                                </li>
-                            }
-                            @if (Model.ClassTable.CurrentPage < Model.ClassTable.TotalPages)
-                            {
-                                <li class="page-item">
-                                    <a class="page-link" 
-                                       href="?currentPage=@(Model.ClassTable.CurrentPage + 1)&pageSize=@Model.ClassTable.PageSize&filterClassName=@Model.ClassTable.FilterClassName">
-                                        Next
-                                    </a>
-                                </li>
-                            }
-                        </ul>
-                    </nav>
+                        <div class="text-muted">
+                            Showing @((Model.ClassTable.CurrentPage - 1) * Model.ClassTable.PageSize + 1) to 
+                            @Math.Min(Model.ClassTable.CurrentPage * Model.ClassTable.PageSize, Model.ClassTable.TotalCount) 
+                            of @Model.ClassTable.TotalCount entries
+                        </div>
 
-                    <div class="text-muted">
-                        Showing @((Model.ClassTable.CurrentPage - 1) * Model.ClassTable.PageSize + 1) to 
-                        @Math.Min(Model.ClassTable.CurrentPage * Model.ClassTable.PageSize, Model.ClassTable.TotalCount) 
-                        of @Model.ClassTable.TotalCount entries
+                        <button class="btn btn-success mt-3" id="exportBtn">Export Visible Data</button>
                     </div>
-
-                    <button class="btn btn-success mt-3" id="exportBtn">Export Visible Data</button>
                 </div>
             </div>
         </div>

@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Week5Project.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Week5Project.horn39v55u.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\data\\users.json",
+      "PackagePath": "staticwebassets\\data\\users.json"
     },
     {
       "Id": "C:\\Users\\bugra\\OneDrive\\Masaüstü\\Ceng382Lab\\Ceng382_25-26_202111007\\Week5Project\\wwwroot\\favicon.ico",

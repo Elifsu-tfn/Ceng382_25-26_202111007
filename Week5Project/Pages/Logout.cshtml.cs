@@ -5,9 +5,11 @@ namespace Week5Project.Pages
 {
     public class LogoutModel : PageModel
     {
-        public IActionResult OnGet()
+        public IActionResult OnPost() 
         {
+            
             HttpContext.Session.Clear();
+
             
             foreach (var cookie in Request.Cookies.Keys)
             {

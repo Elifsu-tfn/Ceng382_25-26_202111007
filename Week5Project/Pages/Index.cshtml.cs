@@ -1,33 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Week5Project.Models;
-using Week5Project.Helpers;
-using System.Collections.Generic;
-using System.Linq;
-using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using Week5Project.Models;
+using Week5Project.Models.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System;
 
 namespace Week5Project.Pages
 {
     public class IndexModel : PageModel
     {
-        public static List<ClassInformationModel> ClassInformation = new List<ClassInformationModel>();
+        private readonly SchoolDbContext _context;
 
-        static IndexModel()
+        public IndexModel(SchoolDbContext context)
         {
-            if (ClassInformation.Count == 0)
-            {
-                for (int i = 1; i <= 100; i++)
-                {
-                    ClassInformation.Add(new ClassInformationModel
-                    {
-                        Id = i,
-                        ClassName = $"Class {i}",
-                        StudentCount = 10 + (i % 30),
-                        Description = $"Description for class {i}"
-                    });
-                }
-            }
+            _context = context;
         }
 
         [BindProperty]
@@ -41,50 +30,48 @@ namespace Week5Project.Pages
 
         public ClassInformationTable ClassTable { get; set; } = new ClassInformationTable();
 
-        public IActionResult OnGet(int currentPage = 1, int pageSize = 10, string filterClassName = null)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1, int pageSize = 10, string filterClassName = null)
         {
             if (!IsAuthenticated())
-            {
                 return RedirectToPage("/Login");
-            }
 
-            LoadTableData(currentPage, pageSize, filterClassName);
+            await LoadTableDataAsync(currentPage, pageSize, filterClassName);
             return Page();
         }
 
         private bool IsAuthenticated()
         {
-            var usernameFromSession = HttpContext.Session.GetString("username");
-            var tokenFromSession = HttpContext.Session.GetString("token");
-            var sessionIdFromSession = HttpContext.Session.GetString("session_id");
+            var sessionUser = HttpContext.Session.GetString("username");
+            var sessionToken = HttpContext.Session.GetString("token");
+            var sessionId = HttpContext.Session.GetString("session_id");
 
-            var usernameFromCookie = Request.Cookies["username"];
-            var tokenFromCookie = Request.Cookies["token"];
-            var sessionIdFromCookie = Request.Cookies["session_id"];
+            var cookieUser = Request.Cookies["username"];
+            var cookieToken = Request.Cookies["token"];
+            var cookieId = Request.Cookies["session_id"];
 
-            return !string.IsNullOrEmpty(usernameFromSession) &&
-                   !string.IsNullOrEmpty(tokenFromSession) &&
-                   !string.IsNullOrEmpty(sessionIdFromSession) &&
-                   usernameFromSession == usernameFromCookie &&
-                   tokenFromSession == tokenFromCookie &&
-                   sessionIdFromSession == sessionIdFromCookie;
+            return !string.IsNullOrEmpty(sessionUser) &&
+                   !string.IsNullOrEmpty(sessionToken) &&
+                   !string.IsNullOrEmpty(sessionId) &&
+                   sessionUser == cookieUser &&
+                   sessionToken == cookieToken &&
+                   sessionId == cookieId;
         }
 
-        private void LoadTableData(int currentPage, int pageSize, string filterClassName)
+        private async Task LoadTableDataAsync(int currentPage, int pageSize, string filterClassName)
         {
-            var query = ClassInformation.AsQueryable();
+            var query = _context.Classes.AsQueryable();
 
             if (!string.IsNullOrEmpty(filterClassName))
             {
-                query = query.Where(c => c.ClassName.Contains(filterClassName, StringComparison.OrdinalIgnoreCase));
+                query = query.Where(c => c.ClassName.Contains(filterClassName));
             }
 
-            var totalCount = query.Count();
-            var classes = query
+            var totalCount = await query.CountAsync();
+            var classes = await query
                 .OrderBy(c => c.Id)
                 .Skip((currentPage - 1) * pageSize)
                 .Take(pageSize)
-                .ToList();
+                .ToListAsync();
 
             ClassTable = new ClassInformationTable
             {
@@ -96,102 +83,122 @@ namespace Week5Project.Pages
             };
         }
 
-        public IActionResult OnPostAdd()
+        public async Task<IActionResult> OnPostAddAsync()
         {
             if (!IsAuthenticated())
-            {
                 return RedirectToPage("/Login");
-            }
 
             if (!ModelState.IsValid)
             {
-                LoadTableData(1, ClassTable.PageSize, ClassTable.FilterClassName);
+                await LoadTableDataAsync(1, ClassTable.PageSize, ClassTable.FilterClassName);
                 return Page();
             }
 
-            var newClass = new ClassInformationModel
+            var newClass = new Class
             {
-                Id = ClassInformation.Any() ? ClassInformation.Max(c => c.Id) + 1 : 1,
                 ClassName = ClassName,
                 StudentCount = StudentCount,
-                Description = Description
+                Description = Description,
+                IsActive = true 
             };
 
-            ClassInformation.Add(newClass);
-            return RedirectToPage(new { 
+            _context.Classes.Add(newClass);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage(new
+            {
                 currentPage = ClassTable.CurrentPage,
                 pageSize = ClassTable.PageSize,
                 filterClassName = ClassTable.FilterClassName
             });
         }
 
-        public IActionResult OnPostDelete(int id)
+        public async Task<IActionResult> OnPostDeleteAsync(int id)
         {
             if (!IsAuthenticated())
-            {
                 return RedirectToPage("/Login");
-            }
 
-            var classToDelete = ClassInformation.FirstOrDefault(c => c.Id == id);
+            var classToDelete = await _context.Classes.FindAsync(id);
             if (classToDelete != null)
             {
-                ClassInformation.Remove(classToDelete);
+                _context.Classes.Remove(classToDelete);
+                await _context.SaveChangesAsync();
             }
-            return RedirectToPage(new { 
+
+            return RedirectToPage(new
+            {
                 currentPage = ClassTable.CurrentPage,
                 pageSize = ClassTable.PageSize,
                 filterClassName = ClassTable.FilterClassName
             });
         }
 
-        public IActionResult OnPostEdit(int id)
+        public async Task<IActionResult> OnPostEditAsync(int id)
         {
             if (!IsAuthenticated())
-            {
                 return RedirectToPage("/Login");
-            }
 
-            var classToEdit = ClassInformation.FirstOrDefault(c => c.Id == id);
+            var classToEdit = await _context.Classes.FindAsync(id);
             if (classToEdit != null)
             {
                 ClassName = classToEdit.ClassName;
                 StudentCount = classToEdit.StudentCount;
                 Description = classToEdit.Description;
-                ClassInformation.Remove(classToEdit);
+
+                // (silme yerine update)
+                classToEdit.ClassName = ClassName;
+                classToEdit.StudentCount = StudentCount;
+                classToEdit.Description = Description;
+                
+                await _context.SaveChangesAsync();
             }
-            
-            LoadTableData(ClassTable.CurrentPage, ClassTable.PageSize, ClassTable.FilterClassName);
-            return Page();
+
+            return RedirectToPage(new
+            {
+                currentPage = ClassTable.CurrentPage,
+                pageSize = ClassTable.PageSize,
+                filterClassName = ClassTable.FilterClassName
+            });
         }
 
-        public IActionResult OnGetExportVisibleData(string filterClassName, int currentPage, int pageSize)
+        public async Task<IActionResult> OnGetExportVisibleDataAsync(string filterClassName, int currentPage, int pageSize)
         {
             if (!IsAuthenticated())
-            {
                 return RedirectToPage("/Login");
-            }
 
-            var query = ClassInformation.AsQueryable();
+            var query = _context.Classes.AsQueryable();
 
             if (!string.IsNullOrEmpty(filterClassName))
             {
-                query = query.Where(c => c.ClassName.Contains(filterClassName, StringComparison.OrdinalIgnoreCase));
+                query = query.Where(c => c.ClassName.Contains(filterClassName));
             }
 
-            var data = query
+            var data = await query
                 .OrderBy(c => c.Id)
                 .Skip((currentPage - 1) * pageSize)
                 .Take(pageSize)
-                .Select(c => new {
+                .Select(c => new
+                {
                     c.Id,
                     c.ClassName,
                     c.StudentCount,
-                    c.Description,
-                    ExportDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                    Description = c.Description ?? string.Empty, // Null kontrolü
+                    ExportDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                    c.IsActive 
                 })
-                .ToList();
+                .ToListAsync();
 
             return new JsonResult(data);
         }
+    }
+
+    public class ClassInformationTable
+    {
+        public List<Class> Classes { get; set; } = new List<Class>();
+        public int CurrentPage { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public string FilterClassName { get; set; }
+        public int TotalPages => (int)Math.Ceiling(TotalCount / (double)PageSize);
     }
 }

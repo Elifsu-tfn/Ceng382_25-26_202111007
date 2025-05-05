@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>57rkdquy26</Fingerprint>
-      <Integrity>TwSdXUOq06+lT7Donsmx0H7ol+9nty6Vn4162kXczJc=</Integrity>
+      <Fingerprint>b4pco53287</Fingerprint>
+      <Integrity>1fksk/TIjjO//CflkI+Cba4wJsvr3vDZ5rhdYI51SSo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\users.json'))</OriginalItemSpec>

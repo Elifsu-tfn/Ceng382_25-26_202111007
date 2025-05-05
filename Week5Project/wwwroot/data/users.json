@@ -1,16 +1,16 @@
 [
-  {
-    "Username": "admin",
-    "Password": "admin123",
-    "Role": "admin",
-    "IsActive": true,
-    "CreatedAt": "2025-04-01T12:00:00"
-  },
-  {
-    "Username": "user1",
-    "Password": "user123",
-    "Role": "user",
-    "IsActive": true,
-    "CreatedAt": "2025-04-10T09:30:00"
-  }
-]
+    {
+      "Username": "admin",
+      "Password": "admin123",
+      "Role": "admin",
+      "IsActive": true,
+      "CreatedAt": "2025-04-01T12:00:00"
+    },
+    {
+      "Username": "user1",
+      "Password": "user123",
+      "Role": "user",
+      "IsActive": true,
+      "CreatedAt": "2025-04-10T09:30:00"
+    }
+  ]
